@@ -1,35 +1,18 @@
-# Leveled Homomorphic Encryption over
-Composite Groups
+# ℓ-Leveled Homomorphic Encryption in Rust
 
-This repository contains the implementation of the first ℓ-leveled homomorphic encryption (HE) schemes over composite groups, offering both multiplicative and additive homomorphic properties. Unlike traditional Fully Homomorphic Encryption (FHE) schemes based on lattice-based or AGCD-based approaches, our scheme is based on the factoring problem and achieves significant improvements in performance.
-Key Features:
-Additive and Multiplicative Homomorphism: Supports both addition and multiplication on encrypted data, addressing the limitations of traditional Partial Homomorphic Encryption (PHE) schemes.
-No Relinearization: Our design eliminates the need for the relinearization operation commonly required in LWE-based HE schemes.
-No Circular Security Assumption: Removes the circular security assumption, further simplifying the security model.
-Expanded Message Space: Supports an extended message space, and with the introduction of the "Double-Sized Message" technique, it can encrypt messages up to twice the size without increasing ciphertext size.
-Superior Performance: Benchmarks show our schemes outperform well-known HE schemes like BFV, BGV, CKKS, and TFHE, especially in multiplication operations, with speeds up to 1000 times faster.
-Motivation:
-Homomorphic encryption allows computations to be performed on encrypted data without decrypting it, which is essential for secure cloud computing, privacy-preserving machine learning, and secure data analysis. Our approach provides a solution that combines both homomorphic properties over composite groups, achieving efficiency and scalability that surpass existing solutions.
+This Rust project implements the first ℓ-leveled homomorphic encryption (HE) schemes over composite groups, supporting both additive and multiplicative homomorphism. Built on the factoring problem, our design outperforms traditional lattice-based HE schemes in both efficiency and simplicity.
 
-Installation:
-Instructions for installing and running the project.
+## Key Features
+- **Additive & Multiplicative Homomorphism**: Perform secure operations on encrypted data without decryption.
+- **No Relinearization**: Avoids the costly relinearization step seen in LWE-based schemes.
+- **No Circular Security Assumption**: Simpler security model without sacrificing strength.
+- **Double-Sized Message Support**: Encrypt messages up to twice the size without increasing ciphertext size.
+- **Blazing Performance**: Up to 1000x faster in multiplication than BFV, BGV, CKKS, and TFHE.
 
-Usage:
+## Installation
+
+1. Install Rust: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
+2. Clone the repo:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   cargo run --release
-
-
-Benchmarks:
-cargo test --release -- --nocapture
-
-Contributing:
-Information on how to contribute to this project.
-
-License:
-Details of the project’s license.
-
-
-
-
+   git clone <repo-url>
+   cd <repo-directory>
