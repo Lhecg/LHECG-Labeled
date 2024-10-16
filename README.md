@@ -1,4 +1,4 @@
-# ℓ-Leveled Homomorphic Encryption in Rust
+# ℓ-Leveled Homomorphic Encryption over Composite Groups
 
 This Rust project implements the first ℓ-leveled homomorphic encryption (HE) schemes over composite groups, supporting both additive and multiplicative homomorphism. Built on the factoring problem, our design outperforms traditional lattice-based HE schemes in both efficiency and simplicity.
 
