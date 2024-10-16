@@ -11,10 +11,9 @@ This project implements a basic homomorphic encryption scheme using the Rust pro
    cd <repository-directory>
 
 2. Run the Project
-cargo run
+cargo run --release
 3. Run Tests
 
-cargo test
-
+cargo test --release -- --nocapture
 
 
