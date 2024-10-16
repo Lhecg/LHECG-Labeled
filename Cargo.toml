@@ -1,0 +1,15 @@
+[package]
+name = "Fhscheme_Labeled"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+num-bigint = { version = "0.4", features = ["rand"] }
+num-traits = "0.2"
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] } 
+toml = "0.5"  # 
+num-primes = "0.2"
+num = "0.4"
+modinverse = "0.1.1"
+num-bigint-dig = "0.8.4 "

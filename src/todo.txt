@@ -1,0 +1,5 @@
+encrypt(1), .... encrypt(1)^10
+add coefficient, power both evalution, equalizer
+bezout aq+bp=1 , a, b---> save a 
+
+# add decryption , a.d^{l-1}
