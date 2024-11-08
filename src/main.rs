@@ -43,7 +43,6 @@ fn main() {
                 let p_prime = Generator::new_prime(params.bits); // use num-primes crate
                 let p_byte = p_prime.clone().to_bytes_be();
                 let p = BigUint::from_bytes_be(&p_byte);
-                // Ehsan: how does it determine the number of bits of p and q?
                 let q_prime = Generator::new_prime(params.bits); // use num-primes crate
                 let q_byte = q_prime.clone().to_bytes_be();
                 let q = BigUint::from_bytes_be(&q_byte);
@@ -69,9 +68,8 @@ fn main() {
 
             preprocessing::save_encrypted_values(&one_encrypted, &modulus_n, encrypted_one_file);       
 
-            // Ehsan: if p, q change, then this file should be updated too.
+            //  if p, q change, then this file should be updated too.
     
-            // Ehsan: I think that we do not need the following few code lines!
 
             // println!("decrypt one:{}", decryption::decrypt_method_one(&one_encrypted, &p, &q, &D, &bigint_t, l_1));
             // if Path::new(filename).exists() {
@@ -82,12 +80,7 @@ fn main() {
            let d_l_array= utility::read_values_from_file(d_l_file);
                 let (one_encrypted, l_1) = encryption::encrypt(&BigInt::from(1), &bigint_t, &params.rhu, &p, &q,&D, &N, params.bits);
                 println!("decrypt one:{}", decryption::decrypt_method_one(&one_encrypted, &p, &q,&d_l_array, &bigint_t, l_1));
-                // let modulus_n=BigInt::from(N.clone());
-                // Save the encrypted values to a file
-            
-            // let arr=Fhscheme_Labeled::utility::read_values_from_file(encrypted_one_file);
-            //println!("encrypted one:{:?}", arr);                    
-
+                
         /*
         let polynomial = Polynomial::new(terms);
         let variables = [
